@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/HomePage.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+    <title>Home</title>
+</head>
+<body>
+    <!--Common nav bar across all sections. Contains the logo as well as the 
+        navigation tabs for each web page-->
+    <nav>
+        <h1 class="logo">
+            <a href="Index.html">WINGFIELD WAGYU.</a>
+        </h1>
+        <div class="nav-tabs">
+            <li><a href="Index.html" class="nav-bold">HOME</a></li>
+            <li><a href="ContactPage.html">CONTACT</a></li>
+            <li><a href="SalesPage.html">SALES</a></li>
+            <li><a href="CattlePage.html">CATTLE</a></li>
+            <li><a href="AboutPage.html">ABOUT</a></li>
+        </div>
+
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+    <section class="mobile-nav">
+        <section class="nav-page">
+            <li><a href="Index.html" class="nav-bold">HOME</a></li>
+        </section>
+        <section class="nav-page">
+            <li><a href="ContactPage.html">CONTACT</a></li>
+        </section>
+        <section class="nav-page">
+            <li><a href="SalesPage.html">SALES</a></li>
+        </section>
+        <section class="nav-page">
+            <li><a href="CattlePage.html">CATTLE</a></li>
+        </section>
+        <section class="nav-page">
+            <li><a href="AboutPage.html">ABOUT</a></li>
+        </section>
+    </section>
+    
+    <!--Section containg the title, the motto and the background image for them-->
+    <section class="title home-screen">
+        <img src="images/HomePageCoverPhoto.jpg" alt="Bull Side Profile" class="black-on-entry">
+        <h2 data-typewriter="WINGFIELD WAGYU."></h2>
+        <h2 class="moto">QUALITY MEATS, PRECISE MANAGEMENT</h2>
+    </section>
+
+    <!--Section containing the Page Buttons-->
+    <section class="learn-more">
+        <h3>LEARN MORE OUT US</h3>
+        <div class="home-buttons">
+            <!--Each button has a background image and title overlaying it-->
+            <a class="home-sceen-button", href="CattlePage.html">
+                <img src="images/HomeButtonCattle.png">
+                <h3>CATTLE</h3>
+            </a>
+            <a class="home-sceen-button center-img-left", href="SalesPage.html">
+                <img src="images/HomeButtonSales.png">
+                <h3>SALES</h3>
+            </a>
+            <a class="home-sceen-button center-img-right", href="ContactPage.html">
+                <img src="images/HomeButtonContact.png">
+                <h3>CONTACT US</h3>
+            </a>
+            <a class="home-sceen-button", href="AboutPage.html">
+                <img src="images/HomeButtonAbout.png">
+                <h3>ABOUT US</h3>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <h1>WINGIFELD WAGYU.</h1>
+    </footer>
+
+    <script src="./js/Typewriter.js"></script>
+
+    <script src="./js/HamburgerMenu.js"></script>
+
+    
+</body>
+</html>

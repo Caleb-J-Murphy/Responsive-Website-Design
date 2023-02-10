@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/Inquire.css">
+    <link rel="stylesheet" href="./css/Contact.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--The font used for the website-->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+    <title>Contact Us</title>
+</head>
+<body>
+    <!--Common nav bar across all sections. Contains the logo as well as the 
+        navigation tabs for each web page-->
+        <nav>
+            <h1 class="logo">
+                <a href="Index.html">WINGFIELD WAGYU.</a>
+            </h1>
+            <div class="nav-tabs">
+                <li><a href="Index.html">HOME</a></li>
+                <li><a href="ContactPage.html" class="nav-bold">CONTACT</a></li>
+                <li><a href="SalesPage.html">SALES</a></li>
+                <li><a href="CattlePage.html">CATTLE</a></li>
+                <li><a href="AboutPage.html">ABOUT</a></li>
+            </div>
+    
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+        <section class="mobile-nav">
+            <section class="nav-page">
+                <li><a href="Index.html" class="nav-bold">HOME</a></li>
+            </section>
+            <section class="nav-page">
+                <li><a href="ContactPage.html">CONTACT</a></li>
+            </section>
+            <section class="nav-page">
+                <li><a href="SalesPage.html">SALES</a></li>
+            </section>
+            <section class="nav-page">
+                <li><a href="CattlePage.html">CATTLE</a></li>
+            </section>
+            <section class="nav-page">
+                <li><a href="AboutPage.html">ABOUT</a></li>
+            </section>
+        </section>
+    
+    <!--Section containing the title of the webpage as well as the cover photo for it-->
+    <section class="title other">
+        <img src="images/ContactPageCoverPhoto.png" alt="Dog on the back of bike">
+        <h3>CONTACT US</h3>
+    </section>
+
+    <!--Section containing the contact information of the employees of the business-->
+    <section class="inquire" style="padding-left:10%; margin-bottom: 2vw; margin-top: 2vw;">
+        <section class="contact-details">
+            <h3>Inquires:</h3>
+            <h4>Email: owner@wingfieldwagyu.org.au <br>
+                Phone: 0412345678</h4> 
+        </section>
+        <section class="contact-details">
+            <h3>Janice Rees: Accountant</h3>
+            <h4>Email: accountant@wingfieldwagyu.org.au <br>
+                Phone: 0487654321</h4> 
+        </section>
+        <section class="contact-details">
+            <h3>Aron Murphy: Manager / Owner</h3>
+            <h4>Email: accountant@wingfieldwagyu.org.au <br>
+                Phone: 0487654321</h4> 
+        </section>
+    </section>
+
+    <!--Section used to to break up each section of the webpage-->
+    <section class="section-break">
+        <img src="images/black.png">
+    </section>
+
+    <!--This sections contains the input fields the user can use to contact the
+        business owner-->
+    <section class="message">
+        <h3>Send us a message</h3>
+        <form id="contactForm" class="form"> 
+            <section class="left-side">
+                <input type="text" id="name" name="name" placeholder="Name" required><br>
+                <input type="email" id="email" name="email" placeholder="Email" required><br><br>
+                <input type="submit" value="SUBMIT"><br>
+            </section>
+            <section class="right-side">
+                <textarea rows = "6" cols = "60" name = "message" placeholder="Message goes here..."></textarea><br>
+            </section>
+        </form>
+    </section>
+    <!--Section used to to break up each section of the webpage-->
+    <section class="section-break">
+        <img src="images/black.png">
+    </section>
+
+    
+    <!--This section gives the user information as to where the farm is 
+        located-->
+    <section class="Location">
+        <section class="where">
+            <h3>Where we are located</h3>
+            <p>
+                <br>
+                Wingfield Wagyu<br>
+                1234 Farm Road<br>
+                Yuleba QLD 4427
+            </p>
+        </section>
+        <!--This section contains the embedded map for the website with the 
+            location of the farm already in the map-->
+        <section class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3567.4209821127215!2d149.34339638248082!3d-26.602949607799246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b96951bbbceb503%3A0x48ca1c318fb87245!2sWarrego%20Hwy%2C%20Yuleba%20QLD%204427!5e0!3m2!1sen!2sau!4v1651987861606!5m2!1sen!2sau" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+    </section>
+
+    <!--Common footer design at the end of every webpage-->
+    <footer>
+        <h1>WINGIFELD WAGYU.</h1>
+    </footer>
+
+    <!--Below are all the modals used in the webpage-->
+    <!--The first modal is the main modal and this contains the messege the 
+        user wants to send as well as question at the top of the modal asking 
+        if the user wishes to send the messege or not-->
+    <section id="modal">
+        <section class="top-box">
+            <h2>Are you sure you want to send this messege?</h2>
+            <button id="yes">Yes</button>
+            <button id="no">No</button>
+        </section>
+        <section class="bot-box">
+            <section>
+                <p>I do not want to send this message. Please do not send this...</p>
+            </section> 
+        </section>
+    </section>
+
+    <!--The 2 modals below are the yes or no variants which pop up depending on
+        whether thhe user accepts or rejects sending the messege-->
+    <section id="yes-mess">
+        <button>Message Sent</button>
+    </section>
+
+    <section id="no-mess">
+        <button>Message Declined</button>
+    </section>
+    
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/Modal_Contact.js"></script>
+</body>
+</html>

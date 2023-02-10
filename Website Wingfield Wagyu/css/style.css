@@ -1,0 +1,253 @@
+/*
+    This contains all the css that is shared between multiple pages
+*/
+
+html {
+    scroll-behavior: smooth;
+}
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+/* Nav Bar */
+
+nav {
+    display: flex;
+    width: 100%;
+    list-style-type: none;
+    justify-content: space-between; /* Spread out elements */
+    align-items: center;
+    background: rgba(38, 38, 38, 0.5); /* Make background colour see through */
+    backdrop-filter: blur(10px);
+    list-style: none; /*Remove the dot at the start of list */
+    top: 0; /* Position the navbar at the top of the page */
+    position: fixed;
+    z-index: 10;
+    box-shadow: 2px 0px 10px rgb(38, 38, 38);
+}
+    nav .nav-tabs {
+        display: flex;
+        padding-right: 3rem;
+    }
+
+    nav .nav-tabs a {
+        display: block;
+        padding: 1vw;
+        margin-right: 1vw;
+        font-size: 1vw;
+        color: #FFFFFF;
+    }
+
+    .nav-bold {
+        font-weight: bolder;
+    }
+
+.logo {
+    margin: 0 0 0 1em;
+}
+    .logo a {
+        display: block;
+        color: #FFFFFF;
+        font-size: 2vw;
+    }
+
+    .logo a, nav .nav-tabs a {
+        text-decoration: none;
+    }
+
+    .logo img {
+        height: 25px;
+    }
+
+/* Title */
+
+.title {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    text-align: left;
+}
+
+.title > h2 {
+    /* Set the title location */
+    margin-left: 20vw;
+    width: 80vw;
+    position: absolute;
+    top: 25vw;
+    left: 0; 
+    right: 0; 
+    transform: translate(0, -50%); 
+
+    /* Set the font style*/
+    font-size: 6vw;
+    text-decoration: underline;
+    color: #FFFFFF;
+    text-shadow: .1vw .1vw .2vw #262626, -.1vw -.1vw .2vw #FFFFFF;
+}
+
+.title img {
+    width: 100%;
+    height: auto;            
+}
+
+/*Title image css for Contact, Sales, Cattle, About page */
+.other {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+    .title > h3 {
+        width: 100%;
+        position: absolute;
+        top: 25vw;
+        left: 0; 
+        right: 100%; 
+        transform: translate(0, -50%); 
+
+        /* Set font style */
+        font-size: 5vw;
+        color: white;
+    }
+
+.section-break {
+    display: flex;
+    margin-top: 1vw;
+    margin-bottom: 2vw;
+    justify-content: center;
+}
+
+    .section-break img{
+        width: 60vw;
+        height: .2vw;
+    }
+
+body h3 {
+    font-size: 1.7vw;
+}
+
+footer {
+    display: flex;
+    padding: 1vw;
+    background-color: #262626;
+    backdrop-filter: blur(10px);
+}
+    footer h1 {
+        display: block;
+        color: #FFFFFF;
+        font-size: 1.5vw;
+    }
+
+
+.hamburger {
+    display:none;
+    width: 5vw;
+    margin-right: 5vw;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+.mobile-nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between; /* Spread out elements */
+    align-items: center;
+    top: 0; /* Position the navbar at the top of the page */
+    position: fixed;
+    height: 6vw;
+    margin-top: 53px;
+    z-index: 10;
+    transform: translate(50%, 0);
+    transition: .3s ease-in-out;
+}
+
+.nav-page {
+    background: rgba(38, 38, 38, 0.5); /* Make background colour see through */
+    backdrop-filter: blur(10px);
+    width:30vw;
+    margin-left: 70vw;
+    height: 6vw;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding:10px;
+}
+
+.nav-page a {
+    font-size: 4vw;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+@media(max-width:700px){
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    
+    nav .nav-tabs {
+        transform: translate(-200%, 0);
+        margin: 16px;
+    }
+
+    .logo {
+        transform: translate(110%, 0);
+        transition: .3s ease-in-out;
+    }
+    .logo a {
+        display: block;
+        color: #FFFFFF;
+        font-size: 3vw;
+    }
+
+    .mobile-nav.active {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: space-between; /* Spread out elements */
+        align-items: center;
+        top: 0; /* Position the navbar at the top of the page */
+        position: fixed;
+        height: 6vw;
+        margin-top: 48px;
+        z-index: 10;
+        transform: translate(0, 0);
+        transition: .3s ease-in-out;
+    }
+
+    footer {
+        display: flex;
+        padding: 1vw;
+        background-color: #262626;
+        backdrop-filter: blur(10px);
+    }
+        footer h1 {
+            display: block;
+            color: #FFFFFF;
+            font-size: 8vw;
+            margin-left:10vw;
+        }
+}

@@ -1,0 +1,121 @@
+/* Section containing the section links that the user can click */
+.go-to {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 2vw;
+    margin-bottom: 4vw;
+}
+
+.go-to h3{
+    margin-left:5vw;
+}
+
+.go-to > section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    width:60vw;
+    margin-left: 20vw;
+}
+
+.go-to a {
+    color: #262626;
+    position: relative;
+    font-size: 1vw;
+    text-decoration: none;
+}
+    /* Following code controls the hover underline animation */
+    .go-to a::after {
+        border-top: .15em solid #262626;
+        content: "";
+        position: absolute;
+            right: 100%;
+            bottom: 0em;
+            left: 0;
+        transition: right .4s cubic-bezier(0, .5, 0, 1);
+    }
+
+    .go-to a:hover {
+        text-decoration: none;
+    }
+
+    .go-to a:hover::after{
+        right: 0;
+    }
+
+/* Section of webpage containing all the animals and acts as the body of the webpage */
+.all-animals {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+    .all-animals h3 {
+        font-size: 1.7vw;
+    }
+    .all-animals h4 {
+        font-size: 1.5vw;
+    }
+    .all-animals p {
+        font-size: 1.3vw;
+    }
+
+    /* Section of the webpage that contains each animal section */
+    .all-animals > section {
+        display: flex;
+        flex-direction: row;
+        width: 90vw;
+        padding-left: 5vw;
+        margin-top: 2vw;
+    }
+
+    .all-animals > section > article {
+        width:20vw;
+        padding-right: 3vw;
+        overflow: hidden;
+    }
+
+    /* Section containing each animal in the animal section */
+    .animals {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    
+    /* Section containing the animal information */
+    .animals > section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        margin-left: 2vw;
+    }
+
+    /* Apply a margin to immediate children of the section in animals */
+    .animals > section > *{
+        margin: 3vw;
+    }
+
+    .animals > section > img {
+        width: 40vw;
+        height: 28vw;
+        border-radius: 2vw;
+        outline: .2vw solid #324C8D;
+    }
+    
+    /* Setting the heart location underneath the description */
+    .heart{
+        margin-top: 3vw;
+        display: flex;
+        align-content: baseline;
+        justify-content: center;
+        padding: 4vw;
+        height: 10vw;
+
+        font-size: 2vw;
+    }
+
+@media(max-width:700px) {
+    
+}

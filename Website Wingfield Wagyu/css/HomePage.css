@@ -1,0 +1,192 @@
+.home-screen img {
+    filter: brightness(90%);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    text-align: left;
+    
+    animation-name: home-screen-black-to-img;
+    animation-duration: 4s;
+    text-align: left;
+
+}
+
+.title .moto {
+    margin-top: 4.8vw;
+    margin-left: 21.5vw;
+    width: 78.5vw;
+    font-size:2.8vw;
+    font-weight: normal;
+    text-decoration: none;
+
+    overflow: hidden;
+    animation: 3s anim-lineUp ease-out
+}
+
+/* Animation of the moto fading in */
+@keyframes anim-lineUp {
+    0% {
+        opacity: 0;
+        transform: translateY(0%);
+    }
+    20% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+        transform: translateY(0%);
+    }
+    80% {
+        opacity: 1;
+        transform: translateY(-50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(-50%);
+    }
+}
+
+    
+
+@keyframes home-screen-black-to-img {
+from {filter: brightness(0%); transform:scale(1.02);}
+to {filter: brightness(90%); transform:scale(1);}
+}
+
+.learn-more {
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+.learn-more > h3 {
+    font-size: 2vw;
+    align-self: center;
+    margin-top: .5vw;
+}
+
+.home-buttons {
+display: flex;
+justify-content: space-between;
+}
+.home-buttons img {
+    width: 20vw;
+    display: block;
+    filter:blur(.2vw);
+    transform:scale(1);
+
+    transition: .2s ease-in-out;
+}
+
+/* Home Buttons Themselves */
+.home-sceen-button {
+position: relative; 
+display: inline-block;
+margin: 2vw;
+overflow: hidden;
+border-radius: 1vw;
+}
+.center-img-left {
+    border-top-right-radius: 3vw;
+}
+
+.center-img-right {
+    border-top-left-radius: 3vw;
+}
+
+
+.home-sceen-button > h3 {
+    position: absolute; 
+    top: 50%; 
+    left: 0; 
+    right: 0; 
+    transform: translate(0, -50%); 
+    text-align: center;
+
+    /* Set the font style */
+    font-size: 2vw;
+    color: white;
+    font-weight: normal;
+
+    transition: .2s ease-in-out;
+}
+
+/* Home Buttons Hover Animations */
+.home-sceen-button:hover > h3{
+    animation-name: home-screen-button-text-anim;
+    animation-duration: .3s;
+    font-size: 2.5vw;
+}
+.home-sceen-button:hover img{
+    animation-name: home-screen-button-img-anim;
+    animation-duration: .5s;
+    filter: brightness(80%);
+    transform:scale(1.05);
+}
+
+@keyframes home-screen-button-img-anim {
+from {transform:scale(1); filter: brightness(100%);}
+to {transform:scale(1.05); filter: brightness(80%);}
+}
+
+
+
+@keyframes home-screen-button-text-anim {
+from {font-size: 2vw;}
+to {font-size: 2.5vw;}
+}
+/*mobile view*/
+@media(max-width:700px) {
+    .home-buttons {
+        display: flex;
+        flex-direction: column;
+    }
+    .home-buttons img {
+        width: 80%;
+        margin-left:10%;
+        margin-top:5%;
+        margin-bottom:5%;
+        display: block;
+        filter:blur(.2vw);
+        transform:scale(1);
+        
+        transition: .2s ease-in-out;
+        border-radius: 10vw;
+    }
+
+    .home-sceen-button {
+        position: relative; 
+        display: inline-block;
+        margin: 2vw;
+        overflow: hidden;
+        border-radius: 1vw;
+        margin-left: 10vw;
+        }
+
+        .home-sceen-button > h3 {
+            position: absolute; 
+            top: 50%; 
+            left: 0; 
+            right: 0; 
+            transform: translate(0, -50%); 
+            text-align: center;
+        
+            /* Set the font style */
+            font-size: 8vw;
+            color: white;
+            font-weight: normal;
+        
+            transition: .2s ease-in-out;
+        }
+
+    .home-sceen-button:hover > h3{
+        animation-name: home-screen-button-text-anim;
+        animation-duration: .3s;
+        font-size: 9vw;
+    }
+
+    @keyframes home-screen-button-text-anim {
+        from {font-size: 8vw;}
+        to {font-size: 9vw;}
+    }
+}

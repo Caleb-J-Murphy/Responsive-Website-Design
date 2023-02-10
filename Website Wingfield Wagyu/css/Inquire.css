@@ -1,0 +1,145 @@
+/* The following css is used by both the about page and the sale page */
+
+.tab-section {
+    display: flex;
+    margin-top: 2vw;
+}
+
+    .tab-section > .content-title {
+        display: flex;
+        width: 20%;
+        justify-content: center;
+    }
+    .content-title > h3 {
+        font-size: 1.5vw;
+        color: #262626;
+        font-weight: bolder;
+    }
+        
+
+.inquire {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+}
+    .contact-details {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .inquire h3{
+        font-size: 1.3vw;
+        color:rgb(50, 76, 141);
+    }
+    .inquire h4{
+        font-size: 1vw;
+        color:#262626;
+        font-weight: normal;
+    }
+
+.story {
+    display: flex;
+    width: 80%;
+    justify-content: space-around;
+}
+    .story > article {
+        width: 50%;
+        padding: 0px 2vw 2vw 2vw;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .story > article img {
+        max-width: 80%;
+        align-self: center;
+        margin:1vw;
+    }
+p {
+    font-size: 1vw;
+}
+
+.contact-details img {
+    width: 40vw;
+    padding-right: 2vw;
+    padding-bottom: 2vw;
+    border-radius: 2vw;
+}
+
+@media(max-width:700px) {
+    .tab-section {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2vw;
+        margin-bottom: 4vw;
+    }
+    
+        .tab-section > .content-title {
+            text-align: center;
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            text-decoration: underline;
+            margin-bottom: 4vw;
+        }
+        .content-title > h3 {
+            font-size: 8vw;
+            color: #262626;
+            font-weight: bolder;
+        }
+            
+    
+    .inquire {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%;
+        text-align: center;
+
+    }
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+        }
+    
+        .inquire h3{
+            font-size: 5vw;
+            color:rgb(50, 76, 141);
+        }
+        .inquire h4{
+            font-size: 3vw;
+            color:#262626;
+            font-weight: normal;
+        }
+    
+    .story {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: space-around;
+    }
+        .story > article {
+            width: 80%;
+            margin-left:10%;
+            padding: 0px 2vw 2vw 2vw;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+        }
+    
+        .story > article img {
+            max-width: 100%;
+            align-self: center;
+            margin:1vw;
+        }
+    p {
+        font-size: 3vw;
+    }
+    
+    .contact-details img {
+        width: 40vw;
+        padding-right: 2vw;
+        padding-bottom: 2vw;
+        border-radius: 2vw;
+    }
+}
